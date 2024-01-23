@@ -35,12 +35,12 @@ window.onload = showAllMarked = () => {
 
       // BUTTON DELETE
 
-      let colDelBtn = document.createElement("td");
-      let btn = document.createElement("BUTTON");
-      let t = document.createTextNode("CLICK ME");
-      btn.classList.add("delete-btn");
-      btn.appendChild(t);
-      colDelBtn.appendChild(btn);
+      // let colDelBtn = document.createElement("td");
+      // let btn = document.createElement("BUTTON");
+      // let t = document.createTextNode("CLICK ME");
+      // btn.classList.add("delete-btn");
+      // btn.appendChild(t);
+      // colDelBtn.appendChild(btn);
 
       // let colDelete = document.createElement("td");
       // let deleteBtn = document.createElement("button");
@@ -99,6 +99,7 @@ let saveBookmark = () => {
       JSON.stringify(savedBookmarkArray)
     );
     clearInputfields();
+    location.reload();
   } else {
     savedBookmarkArray = JSON.parse(localStorage.getItem("savedBookmarkArray"));
 
@@ -115,5 +116,6 @@ let saveBookmark = () => {
     );
 
     clearInputfields();
+    location.reload();
   }
 };
